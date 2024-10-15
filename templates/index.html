@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategix Social Media Content Generator</title>
+</head>
+<body>
+    <h1>Strategix Social Media Content Generator</h1>
+    <form action="/generate" method="post">
+        <label for="business_idea">Business Idea:</label><br>
+        <input type="text" id="business_idea" name="business_idea" required><br><br>
+        
+        <label for="competitors">Competitors (separate with commas):</label><br>
+        <input type="text" id="competitors" name="competitors" required><br><br>
+
+        <input type="submit" value="Generate Content">
+    </form>
+
+    {% if generated_content %}
+        <h2>Generated Content:</h2>
+        <p>{{ generated_content }}</p>
+    {% endif %}
+</body>
+</html>
